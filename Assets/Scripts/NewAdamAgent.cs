@@ -12,6 +12,7 @@ public class NewAdamAgent : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        gameObject.AddComponent<BasicTouchSensor>();
         if (eye == null)
         {
             Debug.LogWarning("Eye transform not assigned. Creating one...");

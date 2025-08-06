@@ -25,6 +25,8 @@ public class NewAdamAgent : MonoBehaviour
         // Attach visualizer
         eye.gameObject.AddComponent<Camera>();
         eye.gameObject.AddComponent<EyeRayVisualizer>();
+        gameObject.AddComponent<AutonomousWanderer>();
+
     }
 
     void Update()

@@ -17,6 +17,8 @@ public class MainSceneInitializer : MonoBehaviour
         floor.transform.localScale = new Vector3(10, 0.1f, 10);
         floor.transform.position = new Vector3(0, -0.05f, 0);
         floor.name = "Floor";
+
+         gameObject.AddComponent<WallSpawner>();
     }
 
     void SpawnNewAdam()

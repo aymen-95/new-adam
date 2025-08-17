@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class WallSpawner : MonoBehaviour
 {
-    void Start()
+ void Start()
     {
         GameObject wall = GameObject.CreatePrimitive(PrimitiveType.Cube);
         wall.transform.localScale = new Vector3(3, 2, 0.2f);
         wall.transform.position = new Vector3(2, 1, 0);
-
+    
+        wall.name = "HotWall";
+        wall.tag = "Wall";
+    
+        var renderer = wall.GetComponent<Renderer>();
+        renderer.material.color = Color.red; // أحمر يدل على الحرارة
+    
         wall.AddComponent<BoxCollider>();
         wall.AddComponent<Rigidbody>().isKinematic = true;
         wall.AddComponent<HotWall>();
